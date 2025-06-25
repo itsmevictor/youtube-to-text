@@ -41,6 +41,6 @@ def download_audio(url, output_dir):
                 actual_path = os.path.join(output_dir, file)
                 if actual_path != audio_path:
                     os.rename(actual_path, audio_path)
-                return audio_path
+                return audio_path, safe_title
         
         raise FileNotFoundError("Downloaded audio file not found")
